@@ -5,6 +5,8 @@ import type { JestEnvironment } from '@jest/environment';
 import type { SnapshotStateType } from 'jest-snapshot';
 import type { RuntimeType as Runtime } from 'jest-runtime';
 
+const getElmSnapshot = require('./run-elm.js') // 'src/Main.elm'
+
 
 async function jasmine2(
     globalConfig: Config.GlobalConfig,
@@ -13,8 +15,8 @@ async function jasmine2(
     runtime: Runtime,
     testPath: string,
 ): Promise<TestResult> {
-    console.log('@@@@@ I am here!!!!!', testPath);
-
+    let snapshotValue = await getElmSnapshot('src/Main.elm')
+    console.log('@@@@@ I am here!!!!!', testPath, snapshotValue);
 
 
     return {
