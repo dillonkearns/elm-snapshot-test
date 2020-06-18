@@ -1,3 +1,4 @@
 node_modules
 coverage
 elm-stuff
+elm-snapshot-test-runner.js
