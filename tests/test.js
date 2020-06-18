@@ -1,5 +1,5 @@
 const path = require('path');
-
+const { compileToString } = require('node-elm-compiler')
 const fs = require('fs');
 
 const getFiles = (/** @type {string} */ source) =>
@@ -19,4 +19,30 @@ getFiles(path.join(__dirname, 'json-files')).forEach(jsonFilename => {
 
 
 
+
+
 })
+
+
+async function runElm() {
+    const elmSource = await compileToString(['src/Main.elm'], { output: 'elm.temp.js' })
+    eval(elmSource.toString())
+    // console.log('elm', Elm)
+    // console.log('global', global)
+
+    return new Promise(function (resolve, reject) {
+        const app = Elm.Main.init({ flags: null });
+
+        app.ports.snapshot.subscribe((snapshotValue) => {
+            resolve(snapshotValue)
+        })
+    })
+}
+
+// runElm()
+test('elm-snapshot-test', async () => {
+    let snapshotValue = await runElm()
+    console.log('snapshot', snapshotValue);
+
+    expect(snapshotValue.value).toMatchSnapshot();
+});
