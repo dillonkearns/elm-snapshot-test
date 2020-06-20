@@ -13,7 +13,7 @@ class TcrReporter {
     }
 
     async onRunComplete(contexts, results) {
-        console.log('results', results.snapshot);
+        // console.log('results', results.snapshot);
 
 
         // const git = simpleGit(await this._getWorkspaceRootPath());
@@ -26,7 +26,7 @@ class TcrReporter {
             // await execGit('commit', message, {
             //     '--all': true
             // });
-            console.log('Success! Time to commit.');
+            // console.log('Success! Time to commit.');
             spawn('osascript', ['commit-all.scpt'])
         }
         else {
@@ -39,9 +39,8 @@ class TcrReporter {
             // const fileToRevertList = this._filterFilesToRevert(fileList);
 
             // await execGit('checkout', ['--', ...fileToRevertList]);
-            console.log('Failure... update snapshots maybe?');
-
-
+            // console.log('Failure... update snapshots maybe?');
+            spawn('osascript', ['update-snapshot-or-revert.scpt'])
         }
 
     }
