@@ -2,4 +2,3 @@
 
 exports[`elm-snapshot-test 1`] = `"abcdefg"`;
 
-exports[`my-first-test 1`] = `"Hello World!"`;

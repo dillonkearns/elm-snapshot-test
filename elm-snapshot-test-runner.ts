@@ -4,6 +4,7 @@ import type { AssertionResult, TestResult } from '@jest/test-result';
 import type { JestEnvironment } from '@jest/environment';
 import type { SnapshotStateType } from 'jest-snapshot';
 import type { RuntimeType as Runtime } from 'jest-runtime';
+// import {} from 'jest'
 
 
 const getElmSnapshot = require('./run-elm.js') // 'src/Main.elm'
@@ -18,9 +19,43 @@ async function jasmine2(
 ): Promise<TestResult> {
     let snapshotValue = await getElmSnapshot('src/Main.elm')
     console.log('#### # I am here!!!!!', testPath, snapshotValue);
+    // const {
+    //     initialize,
+    //     runAndTransformResultsToJestFormat,
+    // } = runtime.requireModule('./package.json')
+    // const {
+    //     initialize,
+    //     runAndTransformResultsToJestFormat,
+    // } = runtime.requireInternalModule('');
 
+    // const results = await initialize({
+    //     config,
+    //     globalConfig,
+    //     testPath,
+    // });
 
-    return {
+    // return results;
+
+    // const snapshotState: SnapshotStateType = runtime.requireInternalModule('')
+    // default({
+    //     config,
+    //     globalConfig,
+    //     localRequire: runtime.requireModule.bind(runtime),
+    //     testPath,
+    // });
+    // console.log(snapshotState);
+    // const snapshotState: SnapshotStateType = {
+    //     added: 0,
+    //     // fileDeleted: false,
+    //     matched: 1,
+    //     // unchecked: 0,
+    //     // uncheckedKeys: [],
+    //     unmatched: 0,
+    //     updated: 0,
+    // }
+
+    const emptyResults: TestResult =
+    {
         console: undefined,
         displayName: snapshotValue.name,
         failureMessage: 'Oh no!',
@@ -58,6 +93,9 @@ async function jasmine2(
 
         }],
     }
+    const snapshotState: SnapshotStateType = null
+
+    return addSnapshotData(emptyResults, snapshotState)
 
 
 
@@ -179,17 +217,18 @@ async function jasmine2(
     //         },
     //     });
     // }
+    // snapshotValue
 
-    // const snapshotState: SnapshotStateType = runtime
-    //     .requireInternalModule<typeof import('./setup_jest_globals')>(
-    //         path.resolve(__dirname, './setup_jest_globals.js'),
-    //     )
-    //     .default({
-    //         config,
-    //         globalConfig,
-    //         localRequire: runtime.requireModule.bind(runtime),
-    //         testPath,
-    //     });
+
+    // .requireInternalModule<typeof import('./setup_jest_globals')>(
+    //     path.resolve(__dirname, './setup_jest_globals.js'),
+    // )
+    // .default({
+    //     config,
+    //     globalConfig,
+    //     localRequire: runtime.requireModule.bind(runtime),
+    //     testPath,
+    // });
 
     // for (const path of config.setupFilesAfterEnv) {
     //     // TODO: remove ? in Jest 26
@@ -234,13 +273,14 @@ const addSnapshotData = (
     results: TestResult,
     snapshotState: SnapshotStateType,
 ) => {
-    results.testResults.forEach(({ fullName, status }: AssertionResult) => {
-        if (status === 'pending' || status === 'failed') {
-            // if test is skipped or failed, we don't want to mark
-            // its snapshots as obsolete.
-            snapshotState.markSnapshotsAsCheckedForTest(fullName);
-        }
-    });
+    // results.testResults.forEach(({ fullName, status }: AssertionResult) => {
+    // if (status === 'pending' || status === 'failed') {
+    // if test is skipped or failed, we don't want to mark
+    // its snapshots as obsolete.
+    const fullName = 'test123'
+    snapshotState.markSnapshotsAsCheckedForTest(fullName);
+    // }
+    // });
 
     const uncheckedCount = snapshotState.getUncheckedCount();
     const uncheckedKeys = snapshotState.getUncheckedKeys();

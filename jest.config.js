@@ -66,10 +66,10 @@ module.exports = {
     // ],
 
     // An array of file extensions your modules use
-    moduleFileExtensions: [
-        "elm",
-        "js"
-    ],
+    // moduleFileExtensions: [
+    //     "elm",
+    //     "js"
+    // ],
     //   "js",
     //   "json",
     //   "jsx",
@@ -141,12 +141,12 @@ module.exports = {
     // testLocationInResults: false,
 
     // The glob patterns Jest uses to detect test files
-    testMatch: [
-        "<rootDir>/elm-snapshot-tests/**/*Test(s).elm",
-        "<rootDir>/elm-snapshot-test(s)/**/*Snapshot*.elm",
-        //   "**/__tests__/**/*.[jt]s?(x)",
-        //   "**/?(*.)+(spec|test).[tj]s?(x)"
-    ],
+    // testMatch: [
+    //     "<rootDir>/elm-snapshot-tests/**/*Test(s).elm",
+    //     "<rootDir>/elm-snapshot-test(s)/**/*Snapshot*.elm",
+    //     //   "**/__tests__/**/*.[jt]s?(x)",
+    //     //   "**/?(*.)+(spec|test).[tj]s?(x)"
+    // ],
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
@@ -160,7 +160,7 @@ module.exports = {
     // testResultsProcessor: undefined,
 
     // This option allows use of a custom test runner
-    testRunner: "<rootDir>/elm-snapshot-test-runner.js",
+    // testRunner: "<rootDir>/elm-snapshot-test-runner.js",
 
     // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
     // testURL: "http://localhost",
