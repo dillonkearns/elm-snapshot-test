@@ -36,7 +36,8 @@ playerScoreToString playerScore =
 
 testCases : List Game
 testCases =
-    [ ( 1, 0 )
+    [ ( 0, 0 )
+    , ( 1, 0 )
     ]
 
 
