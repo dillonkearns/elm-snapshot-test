@@ -27,8 +27,8 @@ testCases =
 
 tennisScores : Dict.Dict ( Int, Int ) String
 tennisScores =
-    [ ( ( 1, 0 ), score ( 1, 0 ) )
-    ]
+    testCases
+        |> List.map (\scores -> ( scores, score scores ))
         |> Dict.fromList
 
 
