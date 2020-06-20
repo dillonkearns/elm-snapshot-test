@@ -20,6 +20,11 @@ score ( player1, player2 ) =
     "15-Love"
 
 
+testCases =
+    [ ( 1, 0 )
+    ]
+
+
 tennisScores : Dict.Dict ( Int, Int ) String
 tennisScores =
     Dict.fromList
