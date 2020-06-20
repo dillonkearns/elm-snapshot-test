@@ -1,11 +1,20 @@
 port module Main exposing (..)
 
+import Dict
+
 
 port snapshot : { name : String, value : String } -> Cmd msg
 
 
 type Model
     = Model
+
+
+tennisScores : Dict.Dict ( Int, Int ) String
+tennisScores =
+    Dict.fromList
+        [ ( ( 1, 0 ), "15-Love" )
+        ]
 
 
 main =
@@ -15,7 +24,7 @@ main =
                 ( Model
                 , snapshot
                     { name = "example1"
-                    , value = "abcdefg"
+                    , value = Debug.toString tennisScores
                     }
                 )
         , update = \msg model -> ( model, Cmd.none )
