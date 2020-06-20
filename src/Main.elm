@@ -27,9 +27,9 @@ testCases =
 
 tennisScores : Dict.Dict ( Int, Int ) String
 tennisScores =
-    Dict.fromList
-        [ ( ( 1, 0 ), score ( 1, 0 ) )
-        ]
+    [ ( ( 1, 0 ), score ( 1, 0 ) )
+    ]
+        |> Dict.fromList
 
 
 main =
