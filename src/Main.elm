@@ -10,6 +10,10 @@ type Model
     = Model
 
 
+init =
+    0
+
+
 tennisScores : Dict.Dict ( Int, Int ) String
 tennisScores =
     Dict.fromList
