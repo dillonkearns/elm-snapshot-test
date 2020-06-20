@@ -30,6 +30,9 @@ playerScoreToString playerScore =
         1 ->
             "15"
 
+        2 ->
+            "30"
+
         _ ->
             "Love"
 
@@ -38,6 +41,7 @@ testCases : List Game
 testCases =
     [ ( 0, 0 )
     , ( 1, 0 )
+    , ( 2, 0 )
     ]
 
 
