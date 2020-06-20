@@ -20,6 +20,7 @@ score ( player1, player2 ) =
     "15-Love"
 
 
+testCases : List ( Int, Int )
 testCases =
     [ ( 1, 0 )
     ]
