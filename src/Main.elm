@@ -35,6 +35,9 @@ playerScoreToString playerScore =
         2 ->
             "30"
 
+        3 ->
+            "40"
+
         _ ->
             "Love"
 
