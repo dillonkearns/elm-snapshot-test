@@ -24,6 +24,7 @@ score ( player1, player2 ) =
     "15-Love"
 
 
+playerScoreToString : Int -> String
 playerScoreToString playerScore =
     "15"
 
