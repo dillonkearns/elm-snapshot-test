@@ -15,6 +15,10 @@ init =
     0
 
 
+type alias Game =
+    ( Int, Int )
+
+
 score : ( Int, Int ) -> String
 score ( player1, player2 ) =
     "15-Love"
