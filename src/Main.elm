@@ -10,7 +10,7 @@ type Model
     = Model
 
 
-init : number
+init : Int
 init =
     0
 
