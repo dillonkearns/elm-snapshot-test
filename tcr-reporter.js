@@ -47,7 +47,11 @@ class TcrReporter {
 
             // await execGit('checkout', ['--', ...fileToRevertList]);
             // console.log('Failure... update snapshots maybe?');
-            spawn('osascript', ['update-snapshot-or-revert.scpt'])
+            spawn('osascript', ['update-snapshot-or-revert.scpt']).on('exit', code => {
+                if (code !== 0) {
+                    spawn('git', ['checkout', '.'])
+                }
+            })
         }
 
     }
