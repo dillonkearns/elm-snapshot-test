@@ -21,7 +21,7 @@ type alias Game =
 
 score : Game -> String
 score ( player1, player2 ) =
-    playerScoreToString player1 ++ "-Love"
+    playerScoreToString player1 ++ "-" ++ "Love"
 
 
 playerScoreToString : Int -> String
