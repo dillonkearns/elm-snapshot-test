@@ -10,6 +10,7 @@ type Model
     = Model
 
 
+init : number
 init =
     0
 
