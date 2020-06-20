@@ -24,6 +24,10 @@ score ( player1, player2 ) =
     "15-Love"
 
 
+playerScoreToString playerScore =
+    "15"
+
+
 testCases : List Game
 testCases =
     [ ( 1, 0 )
