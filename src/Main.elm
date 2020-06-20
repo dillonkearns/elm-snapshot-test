@@ -15,10 +15,14 @@ init =
     0
 
 
+score ( player1, player2 ) =
+    "15-Love"
+
+
 tennisScores : Dict.Dict ( Int, Int ) String
 tennisScores =
     Dict.fromList
-        [ ( ( 1, 0 ), "15-Love" )
+        [ ( ( 1, 0 ), score ( 1, 0 ) )
         ]
 
 
