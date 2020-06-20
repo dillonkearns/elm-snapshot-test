@@ -22,7 +22,11 @@ type alias Game =
 score : Game -> String
 score ( player1, player2 ) =
     if player1 > 3 then
-        "Player 1 wins!"
+        if player1 > (player2 + 1) then
+            "Player 1 wins!"
+
+        else
+            "Ad player 1"
 
     else if player1 == player2 then
         playerScoreToString player1 ++ " all"
@@ -60,6 +64,7 @@ testCases =
     , ( 2, 1 )
     , ( 3, 1 )
     , ( 4, 1 )
+    , ( 5, 4 )
     ]
 
 
