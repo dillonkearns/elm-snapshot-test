@@ -4,8 +4,6 @@ const runElm = require('../run-elm');
 try {
     const MainElm = require('../src/Main.elm')
 } catch (e) {
-    console.log('Error', e);
-
 }
 
 // const getFiles = (/** @type {string} */ source) =>
