@@ -10,7 +10,7 @@ type Model
     = Model
 
 
-init : Int
+init : Float
 init =
     0
 
