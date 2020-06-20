@@ -4,6 +4,9 @@
 // const util = require('util');
 const reporterTypes = require('@jest/reporters/build/types')
 const { span, spawn } = require('child_process')
+const simpleGit = require('simple-git');
+
+const git = simpleGit();
 
 
 class TcrReporter {
@@ -27,7 +30,11 @@ class TcrReporter {
             //     '--all': true
             // });
             // console.log('Success! Time to commit.');
-            spawn('osascript', ['commit-all.scpt'])
+
+            const status = await git.status();
+            if (status.files.length > 0) {
+                spawn('osascript', ['commit-all.scpt'])
+            }
         }
         else {
 
