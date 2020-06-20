@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc elm-snapshot-test-runner.ts && jest",
+    "test": "clear && jest",
+    "watch": "fswatch -0 src/Main.elm | xargs -0  -n1 -I{} npm test",
     "tcr": "tcr jest"
   },
   "keywords": [],
