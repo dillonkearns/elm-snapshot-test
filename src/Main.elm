@@ -15,6 +15,7 @@ init =
     0
 
 
+score : ( Int, Int ) -> String
 score ( player1, player2 ) =
     "15-Love"
 
