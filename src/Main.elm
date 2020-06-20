@@ -26,7 +26,12 @@ score ( player1, player2 ) =
 
 playerScoreToString : Int -> String
 playerScoreToString playerScore =
-    "15"
+    case playerScore of
+        1 ->
+            "15"
+
+        _ ->
+            "Love"
 
 
 testCases : List Game
