@@ -23,7 +23,7 @@ approve2 : (a -> b -> c) -> List a -> List b -> Encode.Value
 approve2 function list1 list2 =
     map2
         (\a b ->
-            ( Debug.toString a ++ Debug.toString b
+            ( Debug.toString a ++ ", " ++ Debug.toString b
             , function a b |> Debug.toString |> Encode.string
             )
         )

@@ -1,7 +1,7 @@
 port module Main exposing (..)
 
-import Dict
 import Json.Encode as Encode
+import Permutations
 
 
 port snapshot : { name : String, value : Encode.Value } -> Cmd msg
@@ -54,28 +54,6 @@ playerScoreToString playerScore =
             "Love"
 
 
-testCases : List Game
-testCases =
-    [ ( 0, 0 )
-    , ( 1, 0 )
-    , ( 2, 0 )
-    , ( 3, 0 )
-    , ( 0, 1 )
-    , ( 1, 1 )
-    , ( 2, 1 )
-    , ( 3, 1 )
-    , ( 4, 1 )
-    , ( 5, 4 )
-    ]
-
-
-tennisScores : Dict.Dict ( Int, Int ) String
-tennisScores =
-    testCases
-        |> List.map (\scores -> ( scores, score scores ))
-        |> Dict.fromList
-
-
 main =
     Platform.worker
         { init =
@@ -83,7 +61,8 @@ main =
                 ( Model
                 , snapshot
                     { name = "example1"
-                    , value = Debug.toString tennisScores |> Encode.string
+                    , value =
+                        Permutations.approve2 (\a b -> score ( a, b )) [ 0, 1, 2, 3, 4, 5 ] [ 0, 1, 2, 3, 4, 5 ]
                     }
                 )
         , update = \msg model -> ( model, Cmd.none )
