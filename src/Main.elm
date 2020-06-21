@@ -54,7 +54,7 @@ playerScoreToString playerScore =
             "40"
 
         _ ->
-            "Love"
+            "Unhandled"
 
 
 main =
