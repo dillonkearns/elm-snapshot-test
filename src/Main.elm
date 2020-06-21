@@ -41,6 +41,9 @@ score ( player1, player2 ) =
 playerScoreToString : Int -> String
 playerScoreToString playerScore =
     case playerScore of
+        0 ->
+            "Love"
+
         1 ->
             "15"
 
