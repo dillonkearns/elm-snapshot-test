@@ -1,9 +1,10 @@
 port module Main exposing (..)
 
 import Dict
+import Json.Encode as Encode
 
 
-port snapshot : { name : String, value : String } -> Cmd msg
+port snapshot : { name : String, value : Encode.Value } -> Cmd msg
 
 
 type Model
@@ -82,7 +83,7 @@ main =
                 ( Model
                 , snapshot
                     { name = "example1"
-                    , value = Debug.toString tennisScores
+                    , value = Debug.toString tennisScores |> Encode.string
                     }
                 )
         , update = \msg model -> ( model, Cmd.none )
