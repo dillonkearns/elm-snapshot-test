@@ -94,7 +94,7 @@ updateQuality =
                             else
                                 Item name sellIn_ quality_
             in
-            updateItemQuality item
+            updateItemQuality_ item
         )
 
 
