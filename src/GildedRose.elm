@@ -20,9 +20,7 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
         let
             quality_ =
                 if quality < 50 then
-                    quality
-                        + 1
-                        + 0
+                    quality + 1
 
                 else
                     quality
