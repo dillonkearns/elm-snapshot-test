@@ -25,6 +25,6 @@ main =
 
 doPermutations () =
     Permutations.approve3 (\a b c -> GildedRose.updateQuality [ GildedRose.Item a b c ])
-        [ "Aged Brie", "Sulfuras, Hand of Ragnaros" ]
+        [ "Aged Brie", "Sulfuras, Hand of Ragnaros", "Not a special item" ]
         [ 0 ]
         [ 0, 1 ]
