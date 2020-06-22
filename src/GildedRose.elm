@@ -98,26 +98,19 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
                     sellIn
         in
         if sellIn_ < 0 then
-            if name /= "Aged Brie" then
-                if name /= "Backstage passes to a TAFKAL80ETC concert" then
-                    if quality_ > 0 then
-                        if name /= "Sulfuras, Hand of Ragnaros" then
-                            Item name sellIn_ (quality_ - 1)
-
-                        else
-                            Item name sellIn_ quality_
+            if name /= "Backstage passes to a TAFKAL80ETC concert" then
+                if quality_ > 0 then
+                    if name /= "Sulfuras, Hand of Ragnaros" then
+                        Item name sellIn_ (quality_ - 1)
 
                     else
                         Item name sellIn_ quality_
 
                 else
-                    Item name sellIn_ (quality_ - quality_)
-
-            else if quality_ < 50 then
-                Item name sellIn_ (quality_ + 1)
+                    Item name sellIn_ quality_
 
             else
-                Item name sellIn_ quality_
+                Item name sellIn_ (quality_ - quality_)
 
         else
             Item name sellIn_ quality_
