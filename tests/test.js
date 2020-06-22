@@ -1,7 +1,3 @@
-const path = require('path');
-const fs = require('fs');
-const runElm = require('../run-elm');
-
 const warnOriginal = console.warn;
 console.warn = function () { };
 const { Elm } = require('../src/Main.elm')
