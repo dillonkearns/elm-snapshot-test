@@ -38,6 +38,9 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
         else
             Item name sellIn_ quality_
 
+    else if name == "Backstage passes to a TAFKAL80ETC concert" then
+        temp item
+
     else
         temp item
 
