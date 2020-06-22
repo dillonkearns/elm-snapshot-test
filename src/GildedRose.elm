@@ -15,7 +15,7 @@ updateQuality =
 
 
 updateItemQuality_ : Item -> Item
-updateItemQuality_ item =
+updateItemQuality_ ((Item name sellIn quality) as item) =
     temp item
 
 
