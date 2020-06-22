@@ -24,9 +24,10 @@ module.exports = {
     // coverageDirectory: undefined,
 
     // An array of regexp pattern strings used to skip coverage collection
-    // coveragePathIgnorePatterns: [
-    //   "/node_modules/"
-    // ],
+    coveragePathIgnorePatterns: [
+        "/node_modules/",
+        "/\\.coverage/"
+    ],
 
     // A list of reporter names that Jest uses when writing coverage reports
     // coverageReporters: [
@@ -170,12 +171,13 @@ module.exports = {
 
     // A map from regular expressions to paths to transformers
     // transform: undefined,
-    transform: { ".*\\.elm": "<rootDir>/elm-transformer.js" }
+    transform: { ".*\\.elm": "<rootDir>/elm-transformer.js" },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-    // transformIgnorePatterns: [
-    //   "/node_modules/"
-    // ],
+    transformIgnorePatterns: [
+        "/node_modules/",
+        "/\\.coverage/"
+    ],
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,
