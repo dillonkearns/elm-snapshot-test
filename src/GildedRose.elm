@@ -14,6 +14,7 @@ updateQuality =
     List.map
         (\item ->
             let
+                updateItemQuality : Item
                 updateItemQuality =
                     case item of
                         Item name sellIn quality ->
