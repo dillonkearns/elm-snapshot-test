@@ -19,10 +19,7 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
     if name == "Aged Brie" then
         let
             quality_ =
-                if False then
-                    quality
-
-                else if quality < 50 then
+                if quality < 50 then
                     quality
                         + 1
                         + (if name == "Backstage passes to a TAFKAL80ETC concert" then
