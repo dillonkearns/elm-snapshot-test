@@ -9,6 +9,7 @@ type Item
     = Item String Int Int
 
 
+updateQuality : List Item -> List Item
 updateQuality =
     List.map
         (\item ->
