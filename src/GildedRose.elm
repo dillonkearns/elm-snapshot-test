@@ -16,7 +16,11 @@ updateQuality =
 
 updateItemQuality_ : Item -> Item
 updateItemQuality_ ((Item name sellIn quality) as item) =
-    temp item
+    if name == "Aged Brie" then
+        temp item
+
+    else
+        temp item
 
 
 temp (Item name sellIn quality) =
