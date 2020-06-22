@@ -83,7 +83,9 @@ module.exports = {
     // moduleNameMapper: {},
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-    // modulePathIgnorePatterns: [],
+    modulePathIgnorePatterns: [
+        "/\\.coverage/"
+    ],
 
     // Activates notifications for test results
     // notify: false,
@@ -187,7 +189,9 @@ module.exports = {
     // verbose: undefined,
 
     // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
-    // watchPathIgnorePatterns: [],
+    watchPathIgnorePatterns: [
+        "/\\.coverage/"
+    ],
 
     // Whether to use watchman for file crawling
     // watchman: true,
