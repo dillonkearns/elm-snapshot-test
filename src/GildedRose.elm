@@ -11,8 +11,7 @@ type Item
 
 updateQuality : List Item -> List Item
 updateQuality =
-    List.map
-        updateItemQuality_
+    List.map updateItemQuality_
 
 
 updateItemQuality_ : Item -> Item
