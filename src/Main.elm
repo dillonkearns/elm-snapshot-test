@@ -24,4 +24,7 @@ main =
 
 
 doPermutations () =
-    Permutations.approve3 (\a b c -> GildedRose.updateQuality [ GildedRose.Item a b c ]) [ "Aged Brie" ] [ 0 ] [ 0 ]
+    Permutations.approve3 (\a b c -> GildedRose.updateQuality [ GildedRose.Item a b c ])
+        [ "Aged Brie" ]
+        [ 0 ]
+        [ 0 ]
