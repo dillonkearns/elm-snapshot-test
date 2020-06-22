@@ -6,7 +6,8 @@
   "scripts": {
     "test": "clear && jest",
     "watch": "fswatch -0 src/Main.elm | xargs -0  -n1 -I{} npm test",
-    "tcr": "tcr jest"
+    "tcr": "tcr jest",
+    "coverage": "elm-coverage --open"
   },
   "keywords": [],
   "author": "",
