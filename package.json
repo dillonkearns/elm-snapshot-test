@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "clear && jest",
-    "watch": "fswatch -0or src/Main.elm | xargs -0  -n1 -I{} npm test",
+    "watch": "npm test && fswatch -0or src/Main.elm | xargs -0  -n1 -I{} npm test",
     "tcr": "tcr jest",
     "coverage": "elm-coverage --open"
   },
