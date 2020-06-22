@@ -15,7 +15,11 @@ updateQuality =
 
 
 updateItemQuality_ : Item -> Item
-updateItemQuality_ (Item name sellIn quality) =
+updateItemQuality_ item =
+    temp item
+
+
+temp (Item name sellIn quality) =
     let
         quality_ =
             if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
