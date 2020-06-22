@@ -14,8 +14,8 @@ updateQuality =
     List.map
         (\item ->
             let
-                updateItemQuality : Item
-                updateItemQuality =
+                updateItemQuality : Item -> Item
+                updateItemQuality item_ =
                     case item of
                         Item name sellIn quality ->
                             let
@@ -94,5 +94,5 @@ updateQuality =
                             else
                                 Item name sellIn_ quality_
             in
-            updateItemQuality
+            updateItemQuality item
         )
