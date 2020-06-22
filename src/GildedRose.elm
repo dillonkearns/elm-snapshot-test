@@ -12,9 +12,7 @@ type Item
 updateQuality : List Item -> List Item
 updateQuality =
     List.map
-        (\item ->
-            updateItemQuality_ item
-        )
+        updateItemQuality_
 
 
 updateItemQuality_ : Item -> Item
