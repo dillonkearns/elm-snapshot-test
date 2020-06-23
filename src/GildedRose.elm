@@ -78,47 +78,46 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
             else
                 Item name sellIn_ quality_
 
-        _ ->
-            if name == "Sulfuras, Hand of Ragnaros" then
-                let
-                    quality_ =
-                        if quality > 0 then
-                            quality
-
-                        else
-                            quality
-
-                    sellIn_ =
-                        sellIn
-                in
-                if sellIn_ < 0 then
-                    if quality_ > 0 then
-                        Item name sellIn_ quality_
+        "Sulfuras, Hand of Ragnaros" ->
+            let
+                quality_ =
+                    if quality > 0 then
+                        quality
 
                     else
-                        Item name sellIn_ quality_
+                        quality
+
+                sellIn_ =
+                    sellIn
+            in
+            if sellIn_ < 0 then
+                if quality_ > 0 then
+                    Item name sellIn_ quality_
 
                 else
                     Item name sellIn_ quality_
 
             else
-                let
-                    quality_ =
-                        if quality > 0 then
-                            quality - 1
+                Item name sellIn_ quality_
 
-                        else
-                            quality
-
-                    sellIn_ =
-                        sellIn - 1
-                in
-                if sellIn_ < 0 then
-                    if quality_ > 0 then
-                        Item name sellIn_ (quality_ - 1)
+        _ ->
+            let
+                quality_ =
+                    if quality > 0 then
+                        quality - 1
 
                     else
-                        Item name sellIn_ quality_
+                        quality
+
+                sellIn_ =
+                    sellIn - 1
+            in
+            if sellIn_ < 0 then
+                if quality_ > 0 then
+                    Item name sellIn_ (quality_ - 1)
 
                 else
                     Item name sellIn_ quality_
+
+            else
+                Item name sellIn_ quality_
