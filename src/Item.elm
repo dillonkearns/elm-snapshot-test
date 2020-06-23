@@ -28,7 +28,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                     Item name sellIn_ (quality_ + 1)
 
                 else
-                    Item name sellIn_ quality_
+                    { item | sellIn = sellIn_, quality = quality_ }
 
             else
                 Item name sellIn_ quality_
