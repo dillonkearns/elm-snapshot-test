@@ -31,7 +31,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                     { item | sellIn = sellIn_, quality = quality_ }
 
             else
-                Item name sellIn_ quality_
+                { item | sellIn = sellIn_, quality = quality_ }
 
         "Backstage passes to a TAFKAL80ETC concert" ->
             let
