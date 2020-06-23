@@ -79,29 +79,33 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
                 Item name sellIn_ quality_
 
         _ ->
-            let
-                quality_ =
-                    if quality > 0 then
-                        if name /= "Sulfuras, Hand of Ragnaros" then
-                            quality - 1
+            if True then
+                let
+                    quality_ =
+                        if quality > 0 then
+                            if name /= "Sulfuras, Hand of Ragnaros" then
+                                quality - 1
+
+                            else
+                                quality
 
                         else
                             quality
 
-                    else
-                        quality
+                    sellIn_ =
+                        if name /= "Sulfuras, Hand of Ragnaros" then
+                            sellIn - 1
 
-                sellIn_ =
-                    if name /= "Sulfuras, Hand of Ragnaros" then
-                        sellIn - 1
+                        else
+                            sellIn
+                in
+                if sellIn_ < 0 then
+                    if quality_ > 0 then
+                        if name /= "Sulfuras, Hand of Ragnaros" then
+                            Item name sellIn_ (quality_ - 1)
 
-                    else
-                        sellIn
-            in
-            if sellIn_ < 0 then
-                if quality_ > 0 then
-                    if name /= "Sulfuras, Hand of Ragnaros" then
-                        Item name sellIn_ (quality_ - 1)
+                        else
+                            Item name sellIn_ quality_
 
                     else
                         Item name sellIn_ quality_
@@ -110,4 +114,35 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
                     Item name sellIn_ quality_
 
             else
-                Item name sellIn_ quality_
+                let
+                    quality_ =
+                        if quality > 0 then
+                            if name /= "Sulfuras, Hand of Ragnaros" then
+                                quality - 1
+
+                            else
+                                quality
+
+                        else
+                            quality
+
+                    sellIn_ =
+                        if name /= "Sulfuras, Hand of Ragnaros" then
+                            sellIn - 1
+
+                        else
+                            sellIn
+                in
+                if sellIn_ < 0 then
+                    if quality_ > 0 then
+                        if name /= "Sulfuras, Hand of Ragnaros" then
+                            Item name sellIn_ (quality_ - 1)
+
+                        else
+                            Item name sellIn_ quality_
+
+                    else
+                        Item name sellIn_ quality_
+
+                else
+                    Item name sellIn_ quality_
