@@ -83,13 +83,13 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
             in
             if sellIn < 0 then
                 if quality_ > 0 then
-                    Item name sellIn quality_
+                    { item | quality = quality_ }
 
                 else
-                    Item name sellIn quality_
+                    { item | quality = quality_ }
 
             else
-                Item name sellIn quality_
+                { item | quality = quality_ }
 
         _ ->
             let
