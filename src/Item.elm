@@ -15,11 +15,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
             let
                 quality_ =
                     if quality < 50 then
-                        if sellIn_ < 0 then
-                            quality + 2
-
-                        else
-                            quality + 1
+                        quality + 1
 
                     else
                         quality
@@ -29,7 +25,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
             in
             if sellIn_ < 0 then
                 if quality_ < 50 then
-                    { item | sellIn = sellIn_, quality = quality_ + 0 }
+                    { item | sellIn = sellIn_, quality = quality_ + 1 }
 
                 else
                     { item | sellIn = sellIn_, quality = quality_ }
