@@ -79,7 +79,7 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
                 Item name sellIn_ quality_
 
         _ ->
-            if True then
+            if name == "Sulfuras, Hand of Ragnaros" then
                 let
                     quality_ =
                         if quality > 0 then
