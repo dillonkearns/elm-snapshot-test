@@ -73,10 +73,6 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                 { item | sellIn = sellIn_, quality = quality_ }
 
         "Sulfuras, Hand of Ragnaros" ->
-            let
-                quality_ =
-                    quality
-            in
             item
 
         _ ->
