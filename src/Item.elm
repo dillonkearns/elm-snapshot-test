@@ -67,7 +67,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                     sellIn - 1
             in
             if sellIn_ < 0 then
-                Item name sellIn_ (quality_ - quality_)
+                Item name sellIn_ 0
 
             else
                 Item name sellIn_ quality_
