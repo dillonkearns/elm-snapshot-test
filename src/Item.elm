@@ -87,12 +87,8 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                 sellIn_ =
                     sellIn - 1
             in
-            if sellIn_ < 0 then
-                if quality_ > 0 then
-                    { item | sellIn = sellIn_, quality = quality_ - 1 }
-
-                else
-                    { item | sellIn = sellIn_, quality = quality_ }
+            if sellIn_ < 0 && quality_ > 0 then
+                { item | sellIn = sellIn_, quality = quality_ - 1 }
 
             else
                 { item | sellIn = sellIn_, quality = quality_ }
