@@ -70,7 +70,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                 { item | sellIn = sellIn_, quality = 0 }
 
             else
-                Item name sellIn_ quality_
+                { item | sellIn = sellIn_, quality = quality_ }
 
         "Sulfuras, Hand of Ragnaros" ->
             let
