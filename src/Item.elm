@@ -1,6 +1,13 @@
 module Item exposing (..)
 
 
+type alias NewItem =
+    { name : String
+    , sellIn : Int
+    , quality : Int
+    }
+
+
 type Item
     = Item String Int Int
 
