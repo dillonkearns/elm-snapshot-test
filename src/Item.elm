@@ -80,9 +80,6 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
 
                     else
                         quality
-
-                sellIn_ =
-                    sellIn
             in
             if sellIn < 0 then
                 if quality_ > 0 then
