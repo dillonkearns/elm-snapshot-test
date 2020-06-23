@@ -75,11 +75,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
         "Sulfuras, Hand of Ragnaros" ->
             let
                 quality_ =
-                    if quality > 0 then
-                        quality
-
-                    else
-                        quality
+                    quality
             in
             if sellIn < 0 then
                 if quality_ > 0 then
