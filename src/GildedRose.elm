@@ -111,11 +111,7 @@ updateItemQuality_ ((Item name sellIn quality) as item) =
                             quality
 
                     sellIn_ =
-                        if name /= "Sulfuras, Hand of Ragnaros" then
-                            sellIn - 1
-
-                        else
-                            sellIn
+                        sellIn - 1
                 in
                 if sellIn_ < 0 then
                     if quality_ > 0 then
