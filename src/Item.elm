@@ -8,12 +8,15 @@ type alias NewItem =
     }
 
 
-type Item
-    = Item String Int Int
+type alias Item =
+    { name : String
+    , sellIn : Int
+    , quality : Int
+    }
 
 
-updateItemQuality_ : Item -> Item
-updateItemQuality_ ((Item name sellIn quality) as item) =
+updateItemQuality_ : NewItem -> NewItem
+updateItemQuality_ ({ name, sellIn, quality } as item) =
     case name of
         "Aged Brie" ->
             let
