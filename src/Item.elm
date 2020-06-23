@@ -77,7 +77,7 @@ updateItemQuality_ ({ name, sellIn, quality } as item) =
                 quality_ =
                     quality
             in
-            { item | quality = quality_ }
+            item
 
         _ ->
             let
