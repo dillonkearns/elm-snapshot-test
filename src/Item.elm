@@ -1,13 +1,6 @@
 module Item exposing (..)
 
 
-type alias NewItem =
-    { name : String
-    , sellIn : Int
-    , quality : Int
-    }
-
-
 type alias Item =
     { name : String
     , sellIn : Int
@@ -15,7 +8,7 @@ type alias Item =
     }
 
 
-updateItemQuality_ : NewItem -> NewItem
+updateItemQuality_ : Item -> Item
 updateItemQuality_ ({ name, sellIn, quality } as item) =
     case name of
         "Aged Brie" ->
