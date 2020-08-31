@@ -10,10 +10,10 @@ all =
             Permutations.verifyCombinations3
                 (\name sellIn quality ->
                     let
-                        item =
+                        createItem =
                             GildedRose.Item name sellIn quality
                     in
-                    GildedRose.updateQuality [ item ]
+                    GildedRose.updateQuality [ createItem ]
                 )
                 [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
                 (List.range -1 50)
