@@ -32,6 +32,33 @@ map3 function list1 list2 list3 =
         list1
 
 
+verify : (a -> b) -> a -> Encode.Value
+verify function a =
+    [ ( Debug.toString a
+      , function a |> Debug.toString |> Encode.string
+      )
+    ]
+        |> Encode.object
+
+
+verify2 : (a -> b -> c) -> a -> b -> Encode.Value
+verify2 function a b =
+    [ ( Debug.toString a ++ ", " ++ Debug.toString b
+      , function a b |> Debug.toString |> Encode.string
+      )
+    ]
+        |> Encode.object
+
+
+verify3 : (a -> b -> c -> d) -> a -> b -> c -> Encode.Value
+verify3 function a b c =
+    [ ( Debug.toString a ++ ", " ++ Debug.toString b ++ ", " ++ Debug.toString c
+      , function a b c |> Debug.toString |> Encode.string
+      )
+    ]
+        |> Encode.object
+
+
 verifyCombinations2 : (a -> b -> c) -> List a -> List b -> Encode.Value
 verifyCombinations2 function list1 list2 =
     map2
