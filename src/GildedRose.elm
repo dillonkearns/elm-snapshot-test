@@ -18,11 +18,6 @@ getName (Name name) =
     name
 
 
-createName : String -> Name
-createName name =
-    Name name
-
-
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item (Name name) sellIn quality
