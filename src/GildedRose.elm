@@ -114,6 +114,7 @@ updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
                     if name /= sulfuras then
                         createItem name sellIn_ (quality_ - 1)
                             |> updateItemSellIn (SellIn sellIn_)
+                            |> updateItemQuality (Quality (quality_ - 1))
 
                     else
                         createItem name sellIn_ quality_
