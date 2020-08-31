@@ -15,7 +15,7 @@ updateQuality : List Item -> List Item
 updateQuality =
     let
         _ =
-            124
+            125
     in
     List.map updateItemQuality_
 
