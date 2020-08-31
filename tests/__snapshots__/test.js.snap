@@ -6,6 +6,8 @@ Object {
   "\\"\\", 1, 1": "[Item \\"\\" 0 0]",
   "\\"Aged Brie\\", 1, 0": "[Item \\"Aged Brie\\" 0 1]",
   "\\"Aged Brie\\", 1, 1": "[Item \\"Aged Brie\\" 0 2]",
+  "\\"Backstage passes to a TAFKAL80ETC concert\\", 1, 0": "[Item \\"Backstage passes to a TAFKAL80ETC concert\\" 0 3]",
+  "\\"Backstage passes to a TAFKAL80ETC concert\\", 1, 1": "[Item \\"Backstage passes to a TAFKAL80ETC concert\\" 0 4]",
   "\\"Sulfuras, Hand of Ragnaros\\", 1, 0": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 0]",
   "\\"Sulfuras, Hand of Ragnaros\\", 1, 1": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 1]",
 }

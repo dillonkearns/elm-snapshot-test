@@ -11,7 +11,7 @@ all =
                 (\name sellIn quality ->
                     GildedRose.updateQuality [ GildedRose.Item name sellIn quality ]
                 )
-                [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie" ]
+                [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
                 [ 1 ]
                 [ 0, 1 ]
     ]
