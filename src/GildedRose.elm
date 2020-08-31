@@ -31,10 +31,14 @@ updateQuality =
     List.map updateQualityItem
 
 
+agedBrie =
+    "Aged Brie"
+
+
 updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
     let
         quality_ =
-            if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
+            if name /= agedBrie && name /= "Backstage passes to a TAFKAL80ETC concert" then
                 if quality > 0 then
                     if name /= "Sulfuras, Hand of Ragnaros" then
                         quality - 1
