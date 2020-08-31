@@ -36,6 +36,11 @@ updateItemSellIn newSellIn (Item name _ quality) =
     Item name newSellIn quality
 
 
+updateItemQuality : Quality -> Item -> Item
+updateItemQuality newQuality (Item name sellIn quality) =
+    Item name sellIn newQuality
+
+
 agedBrie : String
 agedBrie =
     "Aged Brie"
