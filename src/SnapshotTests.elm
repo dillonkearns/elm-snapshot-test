@@ -1,7 +1,7 @@
 module SnapshotTests exposing (..)
 
 import GildedRose
-import Permutations
+import Permutations exposing (test)
 
 
 all =
@@ -18,9 +18,3 @@ all =
                 0
                 0
     ]
-
-
-test name getVerification =
-    { name = name
-    , value = getVerification ()
-    }
