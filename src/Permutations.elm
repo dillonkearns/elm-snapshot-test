@@ -7,6 +7,13 @@ type alias SnapshotValue =
     { name : String, value : Encode.Value }
 
 
+pass : String -> SnapshotValue
+pass name =
+    { name = name
+    , value = Encode.null
+    }
+
+
 test : String -> (() -> Encode.Value) -> SnapshotValue
 test name getVerification =
     { name = name
