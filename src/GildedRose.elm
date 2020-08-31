@@ -23,11 +23,8 @@ updateQuality =
     List.map updateQualityItem
 
 
-updateQualityItem (Item n sellIn quality) =
+updateQualityItem (Item (Name name) sellIn quality) =
     let
-        (Name name) =
-            n
-
         quality_ =
             if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
                 if quality > 0 then
