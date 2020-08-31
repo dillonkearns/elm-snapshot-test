@@ -9,6 +9,11 @@ type Item
     = Item String Int Int
 
 
+createItem : String -> Int -> Int -> Item
+createItem name sellIn quality =
+    Item name sellIn quality
+
+
 updateQuality : GildedRose -> GildedRose
 updateQuality =
     List.map updateQualityItem
