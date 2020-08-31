@@ -31,10 +31,12 @@ updateQuality =
     List.map updateQualityItem
 
 
+agedBrie : String
 agedBrie =
     "Aged Brie"
 
 
+backstagePass : String
 backstagePass =
     "Backstage passes to a TAFKAL80ETC concert"
 
