@@ -9,18 +9,18 @@ type Item
     = Item Name Int Int
 
 
-type alias Name =
-    String
+type Name
+    = Name String
 
 
 getName : Name -> String
-getName name =
+getName (Name name) =
     name
 
 
 createName : String -> Name
 createName name =
-    name
+    Name name
 
 
 createItem : String -> Int -> Int -> Item
