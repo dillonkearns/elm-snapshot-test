@@ -55,7 +55,7 @@ sulfuras =
     "Sulfuras, Hand of Ragnaros"
 
 
-updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
+updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item) =
     let
         quality_ =
             if name /= agedBrie && name /= backstagePass then
