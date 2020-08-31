@@ -226,9 +226,3 @@ Object {
   "\\"\\", 0, 0": "[Item \\"\\" -1 0]",
 }
 `;
-
-exports[`elm-snapshot-test 3`] = `
-Object {
-  "\\"Hello!\\", 100, 100": "[Item \\"Hello!\\" 99 99]",
-}
-`;
