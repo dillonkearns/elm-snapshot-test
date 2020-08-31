@@ -101,7 +101,7 @@ updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
         if name /= agedBrie then
             if name /= backstagePass then
                 if quality_ > 0 then
-                    if name /= "Sulfuras, Hand of Ragnaros" then
+                    if name /= sulfuras then
                         createItem name sellIn_ (quality_ - 1)
 
                     else
