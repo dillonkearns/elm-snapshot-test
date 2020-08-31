@@ -76,12 +76,10 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
                         if sellIn < 11 then
                             if quality < 49 then
                                 if sellIn < 6 && quality < 48 then
-                                    1
-                                        + 1
+                                    2
 
                                 else
                                     1
-                                        + 0
 
                             else
                                 0
