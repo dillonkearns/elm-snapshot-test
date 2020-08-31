@@ -13,11 +13,6 @@ type Name
     = Name String
 
 
-getName : Name -> String
-getName (Name name) =
-    name
-
-
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item (Name name) sellIn quality
