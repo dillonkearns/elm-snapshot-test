@@ -31,9 +31,9 @@ updateQuality =
     List.map updateQualityItem
 
 
-updateItemSellIn : SellIn -> Item -> Item
+updateItemSellIn : Int -> Item -> Item
 updateItemSellIn newSellIn (Item name _ quality) =
-    Item name newSellIn quality
+    Item name (SellIn newSellIn) quality
 
 
 updateItemQuality : Quality -> Item -> Item
@@ -113,7 +113,7 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
                 if quality_ > 0 then
                     if name /= sulfuras then
                         item
-                            |> updateItemSellIn (SellIn sellIn_)
+                            |> updateItemSellIn sellIn_
                             |> updateItemQuality (Quality (quality_ - 1))
 
                     else
