@@ -13,6 +13,10 @@ type Item
 
 updateQuality : List Item -> List Item
 updateQuality =
+    let
+        _ =
+            123
+    in
     List.map updateItemQuality_
 
 
