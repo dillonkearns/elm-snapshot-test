@@ -1,4 +1,4 @@
-module Permutations exposing (verify, verify2, verify3, verifyCombinations2, verifyCombinations3)
+module Permutations exposing (test, verify, verify2, verify3, verifyCombinations2, verifyCombinations3)
 
 import Json.Encode as Encode
 
