@@ -118,6 +118,8 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
 
                     else
                         createItem name sellIn_ quality_
+                            |> updateItemSellIn sellIn_
+                            |> updateItemQuality quality_
 
                 else
                     createItem name sellIn_ quality_
