@@ -3,6 +3,17 @@ module Permutations exposing (verify, verify2, verify3, verifyCombinations2, ver
 import Json.Encode as Encode
 
 
+type alias SnapshotValue =
+    { name : String, value : Encode.Value }
+
+
+test : String -> (() -> Encode.Value) -> SnapshotValue
+test name getVerification =
+    { name = name
+    , value = getVerification ()
+    }
+
+
 succeed : a -> a
 succeed a =
     a
