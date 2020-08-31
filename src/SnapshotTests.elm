@@ -12,6 +12,6 @@ all =
                     GildedRose.updateQuality [ GildedRose.Item name sellIn quality ]
                 )
                 [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
-                [ 1, 6, 11 ]
+                (List.range -1 50)
                 (List.range -1 50)
     ]
