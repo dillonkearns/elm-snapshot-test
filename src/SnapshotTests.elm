@@ -17,6 +17,12 @@ all =
                 ""
                 0
                 0
+    , test "example3" <|
+        \() ->
+            Permutations.verify3 (\a b c -> GildedRose.updateQuality [ GildedRose.Item a b c ])
+                "Hello!"
+                100
+                100
     ]
 
 
