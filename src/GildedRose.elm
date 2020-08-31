@@ -58,7 +58,7 @@ sulfuras =
 updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item) =
     let
         quality_ =
-            if True then
+            if name == agedBrie then
                 if name /= agedBrie && name /= backstagePass then
                     if quality > 0 then
                         if name /= sulfuras then
