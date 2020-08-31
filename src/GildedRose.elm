@@ -18,6 +18,11 @@ getName name =
     name
 
 
+createName : String -> Name
+createName name =
+    name
+
+
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item name sellIn quality
