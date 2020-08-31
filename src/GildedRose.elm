@@ -32,7 +32,7 @@ updateQuality =
 
 
 updateItemSellIn : SellIn -> Item -> Item
-updateItemSellIn newSellIn (Item name sellin quality) =
+updateItemSellIn newSellIn (Item name _ quality) =
     Item name newSellIn quality
 
 
