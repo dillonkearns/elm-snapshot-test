@@ -14,10 +14,6 @@ updateQuality =
     List.map updateQualityItem
 
 
-type SellIn
-    = SellIn Int
-
-
 updateQualityItem (Item name sellIn quality) =
     let
         quality_ =
