@@ -9,6 +9,10 @@ type Item
     = Item String Int Int
 
 
+type Name
+    = Name String
+
+
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item name sellIn quality
