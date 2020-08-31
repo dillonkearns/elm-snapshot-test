@@ -13,5 +13,5 @@ all =
                 )
                 [ "", "Sulfuras, Hand of Ragnaros" ]
                 [ 1 ]
-                [ 0 ]
+                [ 0, 1 ]
     ]
