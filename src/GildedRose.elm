@@ -13,6 +13,10 @@ type Name
     = Name String
 
 
+type SellIn
+    = SellIn Int
+
+
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item (Name name) sellIn quality
