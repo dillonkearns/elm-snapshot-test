@@ -33,7 +33,7 @@ updateQuality =
 
 updateItemSellIn : SellIn -> Item -> Item
 updateItemSellIn newSellIn (Item name sellin quality) =
-    Item name sellin quality
+    Item name newSellIn quality
 
 
 agedBrie : String
