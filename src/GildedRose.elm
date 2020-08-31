@@ -6,7 +6,7 @@ type alias GildedRose =
 
 
 type Item
-    = Item Name SellIn Int
+    = Item Name SellIn Quality
 
 
 type Name
@@ -17,9 +17,13 @@ type SellIn
     = SellIn Int
 
 
+type Quality
+    = Quality Int
+
+
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
-    Item (Name name) (SellIn sellIn) quality
+    Item (Name name) (SellIn sellIn) (Quality quality)
 
 
 updateQuality : GildedRose -> GildedRose
@@ -27,7 +31,7 @@ updateQuality =
     List.map updateQualityItem
 
 
-updateQualityItem (Item (Name name) (SellIn sellIn) quality) =
+updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
     let
         quality_ =
             if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
