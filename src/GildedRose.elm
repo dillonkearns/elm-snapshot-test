@@ -56,7 +56,7 @@ updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
             else if quality < 50 then
                 quality
                     + 1
-                    + (if name == "Backstage passes to a TAFKAL80ETC concert" then
+                    + (if name == backstagePass then
                         if sellIn < 11 then
                             if quality < 49 then
                                 1
