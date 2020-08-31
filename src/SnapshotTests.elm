@@ -4,6 +4,7 @@ import GildedRose exposing (Item)
 import Permutations exposing (test)
 
 
+createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     GildedRose.Item name sellIn quality
 
