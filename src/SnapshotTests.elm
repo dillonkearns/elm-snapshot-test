@@ -13,5 +13,5 @@ all =
                 )
                 [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
                 [ 1, 6, 11 ]
-                (List.range 0 50)
+                (List.range -1 50)
     ]
