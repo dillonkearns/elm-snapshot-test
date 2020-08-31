@@ -32,8 +32,8 @@ map3 function list1 list2 list3 =
         list1
 
 
-approve2 : (a -> b -> c) -> List a -> List b -> Encode.Value
-approve2 function list1 list2 =
+verifyCombinations2 : (a -> b -> c) -> List a -> List b -> Encode.Value
+verifyCombinations2 function list1 list2 =
     map2
         (\a b ->
             ( Debug.toString a ++ ", " ++ Debug.toString b
@@ -45,8 +45,8 @@ approve2 function list1 list2 =
         |> Encode.object
 
 
-approve3 : (a -> b -> c -> d) -> List a -> List b -> List c -> Encode.Value
-approve3 function list1 list2 list3 =
+verifyCombinations3 : (a -> b -> c -> d) -> List a -> List b -> List c -> Encode.Value
+verifyCombinations3 function list1 list2 list3 =
     map3
         (\a b c ->
             ( Debug.toString a ++ ", " ++ Debug.toString b ++ ", " ++ Debug.toString c
