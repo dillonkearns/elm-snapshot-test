@@ -15,5 +15,7 @@ function getSnapshot() {
 
 test('elm-snapshot-test', async () => {
     const snapshotValue = await getSnapshot()
-    expect(snapshotValue.value).toMatchSnapshot();
+    snapshotValue.forEach(snapshot => {
+        expect(snapshot.value).toMatchSnapshot();
+    })
 });

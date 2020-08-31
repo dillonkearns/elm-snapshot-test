@@ -196,3 +196,9 @@ Object {
   "\\"Sulfuras, Hand of Ragnaros\\", 6, 51": "[Item \\"Sulfuras, Hand of Ragnaros\\" 6 51]",
 }
 `;
+
+exports[`elm-snapshot-test 2`] = `
+Object {
+  "\\"\\", 0, 0": "[Item \\"\\" -1 0]",
+}
+`;
