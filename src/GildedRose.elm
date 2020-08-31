@@ -30,8 +30,8 @@ updateQuality =
 
 updateQualityItem (Item n sellIn quality) =
     let
-        name =
-            getName n
+        (Name name) =
+            n
 
         quality_ =
             if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
