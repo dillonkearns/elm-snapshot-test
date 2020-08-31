@@ -91,7 +91,7 @@ updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
                 quality
 
         sellIn_ =
-            if name /= "Sulfuras, Hand of Ragnaros" then
+            if name /= sulfuras then
                 sellIn - 1
 
             else
