@@ -1,4 +1,4 @@
-module GildedRose exposing (Item(..), createItem, updateQuality)
+module GildedRose exposing (Item, createItem, updateQuality)
 
 
 type alias GildedRose =
