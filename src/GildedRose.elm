@@ -13,6 +13,11 @@ type alias Name =
     String
 
 
+getName : Name -> String
+getName name =
+    name
+
+
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
     Item name sellIn quality
