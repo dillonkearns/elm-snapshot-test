@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "clear && jest --no-cache",
+    "test": "elm-coverage && clear && jest --no-cache",
     "tcr": "npm run tcr-run; fswatch -0or src/*.elm snapshot-tests/*.elm | xargs -0  -n1 -I{} npm run tcr-run",
     "tcr-run": "clear && npm test && npm run tcr-commit || npm run tcr-revert",
     "tcr-commit": "git diff --exit-code || osascript commit-all.scpt",
