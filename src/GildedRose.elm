@@ -32,8 +32,8 @@ updateQuality =
 
 
 updateItemSellIn : SellIn -> Item -> Item
-updateItemSellIn sellIn item =
-    item
+updateItemSellIn sellIn (Item name sellin quality) =
+    Item name sellin quality
 
 
 agedBrie : String
