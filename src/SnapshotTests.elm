@@ -8,12 +8,12 @@ all =
     [ test "example" <|
         \() ->
             Permutations.verifyCombinations3
-                (\name sellIn quality ->
+                (\n sellIn quality ->
                     let
-                        createItem =
+                        createItem name =
                             GildedRose.Item name sellIn quality
                     in
-                    GildedRose.updateQuality [ createItem ]
+                    GildedRose.updateQuality [ createItem n ]
                 )
                 [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
                 (List.range -1 50)
