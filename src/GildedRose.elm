@@ -6,7 +6,7 @@ type alias GildedRose =
 
 
 type Item
-    = Item String Int Int
+    = Item Name Int Int
 
 
 type alias Name =
