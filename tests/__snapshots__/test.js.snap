@@ -3,5 +3,6 @@
 exports[`elm-snapshot-test 1`] = `
 Object {
   "\\"\\", 1, 0": "[Item \\"\\" 0 0]",
+  "\\"Sulfuras, Hand of Ragnaros\\", 1, 0": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 0]",
 }
 `;
