@@ -25,7 +25,7 @@ createName name =
 
 createItem : String -> Int -> Int -> Item
 createItem name sellIn quality =
-    Item (createName name) sellIn quality
+    Item (Name name) sellIn quality
 
 
 updateQuality : GildedRose -> GildedRose
