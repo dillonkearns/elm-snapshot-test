@@ -4,11 +4,15 @@ exports[`elm-snapshot-test 1`] = `
 Object {
   "\\"\\", 1, 0": "[Item \\"\\" 0 0]",
   "\\"\\", 1, 1": "[Item \\"\\" 0 0]",
+  "\\"\\", 1, 49": "[Item \\"\\" 0 48]",
   "\\"Aged Brie\\", 1, 0": "[Item \\"Aged Brie\\" 0 1]",
   "\\"Aged Brie\\", 1, 1": "[Item \\"Aged Brie\\" 0 2]",
+  "\\"Aged Brie\\", 1, 49": "[Item \\"Aged Brie\\" 0 50]",
   "\\"Backstage passes to a TAFKAL80ETC concert\\", 1, 0": "[Item \\"Backstage passes to a TAFKAL80ETC concert\\" 0 3]",
   "\\"Backstage passes to a TAFKAL80ETC concert\\", 1, 1": "[Item \\"Backstage passes to a TAFKAL80ETC concert\\" 0 4]",
+  "\\"Backstage passes to a TAFKAL80ETC concert\\", 1, 49": "[Item \\"Backstage passes to a TAFKAL80ETC concert\\" 0 50]",
   "\\"Sulfuras, Hand of Ragnaros\\", 1, 0": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 0]",
   "\\"Sulfuras, Hand of Ragnaros\\", 1, 1": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 1]",
+  "\\"Sulfuras, Hand of Ragnaros\\", 1, 49": "[Item \\"Sulfuras, Hand of Ragnaros\\" 1 49]",
 }
 `;
