@@ -41,6 +41,10 @@ backstagePass =
     "Backstage passes to a TAFKAL80ETC concert"
 
 
+sulfuras =
+    "Sulfuras, Hand of Ragnaros"
+
+
 updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
     let
         quality_ =
