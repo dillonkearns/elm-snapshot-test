@@ -31,6 +31,11 @@ updateQuality =
     List.map updateQualityItem
 
 
+updateItemSellIn : SellIn -> Item -> Item
+updateItemSellIn sellIn item =
+    item
+
+
 agedBrie : String
 agedBrie =
     "Aged Brie"
