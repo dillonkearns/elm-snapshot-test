@@ -9,8 +9,8 @@ type Item
     = Item String Int Int
 
 
-type Name
-    = Name String
+type alias Name =
+    String
 
 
 createItem : String -> Int -> Int -> Item
