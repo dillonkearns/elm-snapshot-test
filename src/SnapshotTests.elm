@@ -9,6 +9,6 @@ all =
         \() ->
             Permutations.verify3 (\a b c -> GildedRose.updateQuality [ GildedRose.Item a b c ])
                 ""
-                0
+                1
                 0
     ]
