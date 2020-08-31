@@ -71,20 +71,19 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
 
             else if quality < 50 then
                 quality
-                    + 1
                     + (if name == backstagePass then
                         if sellIn < 11 && quality < 49 then
                             if sellIn < 6 && quality < 48 then
-                                2
+                                1 + 2
 
                             else
-                                1
+                                1 + 1
 
                         else
-                            0
+                            1
 
                        else
-                        0
+                        1
                       )
 
             else
