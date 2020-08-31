@@ -18,6 +18,11 @@ createItem name sellIn quality =
     Item name sellIn quality
 
 
+itemName : Item -> String
+itemName (Item name _ _) =
+    name
+
+
 updateQuality : GildedRose -> GildedRose
 updateQuality =
     List.map updateQualityItem
