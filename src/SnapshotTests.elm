@@ -1,6 +1,6 @@
 module SnapshotTests exposing (..)
 
-import GildedRose exposing (Item)
+import GildedRose
 import Permutations exposing (test)
 
 
