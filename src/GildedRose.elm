@@ -36,9 +36,9 @@ updateItemSellIn newSellIn (Item name _ quality) =
     Item name (SellIn newSellIn) quality
 
 
-updateItemQuality : Quality -> Item -> Item
+updateItemQuality : Int -> Item -> Item
 updateItemQuality newQuality (Item name sellIn _) =
-    Item name sellIn newQuality
+    Item name sellIn (Quality newQuality)
 
 
 agedBrie : String
@@ -114,7 +114,7 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
                     if name /= sulfuras then
                         item
                             |> updateItemSellIn sellIn_
-                            |> updateItemQuality (Quality (quality_ - 1))
+                            |> updateItemQuality (quality_ - 1)
 
                     else
                         createItem name sellIn_ quality_
