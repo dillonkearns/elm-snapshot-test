@@ -35,6 +35,10 @@ agedBrie =
     "Aged Brie"
 
 
+backstagePass =
+    "Backstage passes to a TAFKAL80ETC concert"
+
+
 updateQualityItem (Item (Name name) (SellIn sellIn) (Quality quality)) =
     let
         quality_ =
