@@ -8,8 +8,8 @@ all =
     [ test "example" <|
         \() ->
             Permutations.verifyCombinations3
-                (\name sellIn c ->
-                    GildedRose.updateQuality [ GildedRose.Item name sellIn c ]
+                (\name sellIn quality ->
+                    GildedRose.updateQuality [ GildedRose.Item name sellIn quality ]
                 )
                 [ "", "Sulfuras, Hand of Ragnaros" ]
                 [ 1 ]
