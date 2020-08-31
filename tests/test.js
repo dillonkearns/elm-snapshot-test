@@ -1,6 +1,6 @@
 const warnOriginal = console.warn;
 console.warn = function () { };
-const { Elm } = require('../src/Main.elm')
+const { Elm } = require('../snapshot-tests/Main.elm')
 console.warn = warnOriginal;
 
 function getSnapshot() {
