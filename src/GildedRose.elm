@@ -66,7 +66,7 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
                 else
                     quality
 
-            else if name /= agedBrie && name /= backstagePass then
+            else if True && name /= backstagePass then
                 if quality > 0 then
                     if name /= sulfuras then
                         quality - 1
