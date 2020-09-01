@@ -1,4 +1,4 @@
-module GildedRose exposing (Item, createItem, updateQuality)
+module GildedRose exposing (Item(..), updateQuality)
 
 
 type alias GildedRose =
@@ -6,24 +6,7 @@ type alias GildedRose =
 
 
 type Item
-    = Item Name SellIn Quality
-
-
-type Name
-    = Name String
-
-
-type SellIn
-    = SellIn Int
-
-
-type Quality
-    = Quality Int
-
-
-createItem : String -> Int -> Int -> Item
-createItem name sellIn quality =
-    Item (Name name) (SellIn sellIn) (Quality quality)
+    = Item String Int Int
 
 
 updateQuality : GildedRose -> GildedRose
@@ -31,44 +14,12 @@ updateQuality =
     List.map updateQualityItem
 
 
-updateItemSellIn : Int -> Item -> Item
-updateItemSellIn newSellIn (Item name _ quality) =
-    Item name (SellIn newSellIn) quality
-
-
-updateItemQuality : Int -> Item -> Item
-updateItemQuality newQuality (Item name sellIn _) =
-    Item name sellIn (Quality newQuality)
-
-
-agedBrie : String
-agedBrie =
-    "Aged Brie"
-
-
-backstagePass : String
-backstagePass =
-    "Backstage passes to a TAFKAL80ETC concert"
-
-
-sulfuras =
-    "Sulfuras, Hand of Ragnaros"
-
-
-updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item) =
+updateQualityItem (Item name sellIn quality) =
     let
         quality_ =
-            if name == agedBrie then
-                if quality < 50 then
-                    quality
-                        + 1
-
-                else
-                    quality
-
-            else if name /= backstagePass then
+            if name /= "Aged Brie" && name /= "Backstage passes to a TAFKAL80ETC concert" then
                 if quality > 0 then
-                    if name /= sulfuras then
+                    if name /= "Sulfuras, Hand of Ragnaros" then
                         quality - 1
 
                     else
@@ -79,62 +30,63 @@ updateQualityItem ((Item (Name name) (SellIn sellIn) (Quality quality)) as item)
 
             else if quality < 50 then
                 quality
-                    + (if sellIn < 11 && quality < 49 then
-                        if sellIn < 6 && quality < 48 then
-                            3
+                    + 1
+                    + (if name == "Backstage passes to a TAFKAL80ETC concert" then
+                        if sellIn < 11 then
+                            if quality < 49 then
+                                1
+                                    + (if sellIn < 6 then
+                                        if quality < 48 then
+                                            1
+
+                                        else
+                                            0
+
+                                       else
+                                        0
+                                      )
+
+                            else
+                                0
 
                         else
-                            2
+                            0
 
                        else
-                        1
+                        0
                       )
 
             else
                 quality
 
         sellIn_ =
-            if name /= sulfuras then
+            if name /= "Sulfuras, Hand of Ragnaros" then
                 sellIn - 1
 
             else
                 sellIn
     in
     if sellIn_ < 0 then
-        if name /= agedBrie then
-            if name /= backstagePass then
+        if name /= "Aged Brie" then
+            if name /= "Backstage passes to a TAFKAL80ETC concert" then
                 if quality_ > 0 then
-                    if name /= sulfuras then
-                        item
-                            |> updateItemSellIn sellIn_
-                            |> updateItemQuality (quality_ - 1)
+                    if name /= "Sulfuras, Hand of Ragnaros" then
+                        Item name sellIn_ (quality_ - 1)
 
                     else
-                        item
-                            |> updateItemSellIn sellIn_
-                            |> updateItemQuality quality_
+                        Item name sellIn_ quality_
 
                 else
-                    item
-                        |> updateItemSellIn sellIn_
-                        |> updateItemQuality quality_
+                    Item name sellIn_ quality_
 
             else
-                item
-                    |> updateItemSellIn sellIn_
-                    |> updateItemQuality 0
+                Item name sellIn_ (quality_ - quality_)
 
         else if quality_ < 50 then
-            item
-                |> updateItemSellIn sellIn_
-                |> updateItemQuality (quality_ + 1)
+            Item name sellIn_ (quality_ + 1)
 
         else
-            item
-                |> updateItemSellIn sellIn_
-                |> updateItemQuality quality_
+            Item name sellIn_ quality_
 
     else
-        item
-            |> updateItemSellIn sellIn_
-            |> updateItemQuality quality_
+        Item name sellIn_ quality_
