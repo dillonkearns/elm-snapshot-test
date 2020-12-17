@@ -8,10 +8,10 @@ all =
     [ test "example" <|
         \() ->
             Permutations.verifyCombinations3
-                (\n s q ->
-                    GildedRose.updateQuality [ GildedRose.Item n s q ]
+                (\first second third ->
+                    first ++ String.fromInt second ++ String.fromInt third
                 )
-                [ "", "Sulfuras, Hand of Ragnaros", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" ]
-                (List.range -1 50)
-                (List.range -1 50)
+                [ "A", "B", "C" ]
+                [ 1, 2, 3 ]
+                [ 97, 98, 99 ]
     ]
