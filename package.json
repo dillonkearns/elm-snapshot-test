@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "clear && jest --no-cache",
+    "test": "clear && jest --no-cache && npm run coverage",
+    "test-watch": "npm test; fswatch -0or src/*.elm | xargs -0  -n1 -I{} npm test",
     "tcr": "npm run tcr-run; fswatch -0or src/*.elm | xargs -0  -n1 -I{} npm run tcr-run",
     "tcr-run": "clear && npm test && npm run tcr-commit || npm run tcr-revert",
     "tcr-commit": "git diff --exit-code || osascript commit-all.scpt",
